@@ -32,9 +32,29 @@
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@mapbox/whoots-js/-/whoots-js-3.0.0.tgz#c1de4293081424da3ac30c23afa850af1019bb54"
 
-"@turf/helpers@5.0.4":
+"@pik/map@https://gitlab.pikweb.net/urbica/map-v2.git":
+  version "0.3.0"
+  resolved "https://gitlab.pikweb.net/urbica/map-v2.git#b8dee1fbe92c6b14d06dead80be3556011d0e0c5"
+  dependencies:
+    "@turf/bbox" "5.0.4"
+    "@turf/helpers" "5.0.4"
+
+"@turf/bbox@5.0.4":
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/@turf/bbox/-/bbox-5.0.4.tgz#5c3d288f9900661cbdc173cd46041c13829af311"
+  dependencies:
+    "@turf/helpers" "^5.0.4"
+    "@turf/meta" "^5.0.4"
+
+"@turf/helpers@5.0.4", "@turf/helpers@^5.0.4":
   version "5.0.4"
   resolved "https://registry.yarnpkg.com/@turf/helpers/-/helpers-5.0.4.tgz#e47a4e4f38dee3b47a3177a69de162d7a7a5837f"
+
+"@turf/meta@^5.0.4":
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/@turf/meta/-/meta-5.0.4.tgz#b41d08f19d2ecc934805b6d713a663abd9f83213"
+  dependencies:
+    "@turf/helpers" "^5.0.4"
 
 "@urbica/react-map-gl@0.6.0-beta.1":
   version "0.6.0-beta.1"
@@ -1029,8 +1049,8 @@ caniuse-api@^1.5.2:
     lodash.uniq "^4.5.0"
 
 caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
-  version "1.0.30000775"
-  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000775.tgz#04bccdd0214edf25b97f61a096609f7ad6904333"
+  version "1.0.30000777"
+  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000777.tgz#2e19adba63bdd7c501df637a862adead7f4bc054"
 
 caniuse-lite@^1.0.30000770:
   version "1.0.30000777"
@@ -1813,9 +1833,13 @@ extract-text-webpack-plugin@3.0.2:
     schema-utils "^0.3.0"
     webpack-sources "^1.0.1"
 
-extsprintf@1.3.0, extsprintf@^1.2.0:
+extsprintf@1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.3.0.tgz#96918440e3041a7a414f8c52e3c574eb3c3e1e05"
+
+extsprintf@^1.2.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.4.0.tgz#e2689f8f356fad62cca65a3a91c5df5f9551692f"
 
 falafel@^2.1.0:
   version "2.1.0"
@@ -2209,6 +2233,10 @@ immutable@4.0.0-rc.9:
   version "4.0.0-rc.9"
   resolved "https://registry.yarnpkg.com/immutable/-/immutable-4.0.0-rc.9.tgz#1e6e0094e649013ec3742d2b5aeeca5eeda4f0bf"
 
+imports@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/imports/-/imports-1.0.0.tgz#ae61446408b99ce333687ed7eef169ca44f57218"
+
 indexes-of@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/indexes-of/-/indexes-of-1.0.1.tgz#f30f716c8e2bd346c7b67d3df3915566a7c05607"
@@ -2386,8 +2414,8 @@ isstream@~0.1.2:
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
 
 js-base64@^2.1.9:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.3.2.tgz#a79a923666372b580f8e27f51845c6f7e8fbfbaf"
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.4.0.tgz#9e566fee624751a1d720c966cd6226d29d4025aa"
 
 js-tokens@^3.0.0, js-tokens@^3.0.2:
   version "3.0.2"
@@ -2792,6 +2820,14 @@ negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
 
+node-fetch-polyfill@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/node-fetch-polyfill/-/node-fetch-polyfill-2.0.6.tgz#073ce3ad6826bdb995a8728cfc4e3823f204407a"
+  dependencies:
+    encoding "^0.1.11"
+    is-stream "^1.0.1"
+    node-web-streams "^0.2.1"
+
 node-fetch@^1.0.1:
   version "1.7.3"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-1.7.3.tgz#980f6f72d85211a5347c6b2bc18c5b84c3eb47ef"
@@ -2842,6 +2878,13 @@ node-pre-gyp@^0.6.39:
     semver "^5.3.0"
     tar "^2.2.1"
     tar-pack "^3.4.0"
+
+node-web-streams@^0.2.1:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/node-web-streams/-/node-web-streams-0.2.2.tgz#087e76bbeb7e8dc56686b25db4e60c5ff9db091f"
+  dependencies:
+    is-stream "^1.1.0"
+    web-streams-polyfill "git://github.com/gwicke/web-streams-polyfill#spec_performance_improvements"
 
 "nomnom@>= 1.5.x":
   version "1.8.1"
@@ -4349,6 +4392,10 @@ watchpack@^1.4.0:
     chokidar "^1.7.0"
     graceful-fs "^4.1.2"
 
+"web-streams-polyfill@git://github.com/gwicke/web-streams-polyfill#spec_performance_improvements":
+  version "1.2.2"
+  resolved "git://github.com/gwicke/web-streams-polyfill#42c488428adea1dc0c0245014e4896ad456b1ded"
+
 webpack-bundle-analyzer@2.9.1:
   version "2.9.1"
   resolved "https://registry.yarnpkg.com/webpack-bundle-analyzer/-/webpack-bundle-analyzer-2.9.1.tgz#c2c8e03e8e5768ed288b39ae9e27a8b8d7b9d476"
@@ -4411,7 +4458,7 @@ wgs84@0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/wgs84/-/wgs84-0.0.0.tgz#34fdc555917b6e57cf2a282ed043710c049cdc76"
 
-whatwg-fetch@>=0.10.0:
+whatwg-fetch@>=0.10.0, whatwg-fetch@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-2.0.3.tgz#9c84ec2dcf68187ff00bc64e1274b442176e1c84"
 
