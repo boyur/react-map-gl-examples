@@ -4,7 +4,7 @@ import MapPik from '@pik/map';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import '@pik/map/src/components/MapPik/style.css'
 
-const server = 'https://pik-admin.urbica.co';
+const server = 'https://map.pik.ru';
 const token = 'pk.eyJhbGciOiJIUzI1NiJ9.cHVibGlj.KFtMch9eeBMfLUVHAvDFlyPwfSI4V8EYu5yW5qIa9Sg';
 const options = { method: 'GET' };
 
